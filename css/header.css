@@ -1,0 +1,169 @@
+.header {
+	/*display: none;*/
+	height: 96px;
+	border-bottom: 1px solid var(--main-color3);
+}
+.header-container {
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;	
+	padding: 0 24px;
+}
+
+/* Верхнее горизонтальное меню навигации */
+.nav-desktop {
+	display: flex;
+	height: 100%;	
+	margin-right: auto;
+}
+.nav-desktop__list { 
+	height: 100%;
+	display: flex;
+}
+.nav-desktop__item:not(:last-child) {
+	margin-right: 48px;
+}
+.nav-desktop__link {
+	display: block;
+	height: 100%;
+	line-height: 1;
+	padding-top: 40px;
+	color: var(--main-color1);
+	font-size: 16px;
+}
+.nav-desktop__link:hover {
+	color: var(--main-color3);
+	border-bottom: 4px solid var(--main-color3);
+}
+
+
+/* Мобильное меню навигации */
+
+/* Иконка бургер-меню */
+#burger-checkbox {
+	display: none;
+}
+#burger-checkbox:checked ~ .nav-mobil {
+transform: none;
+}
+#burger-checkbox:checked ~ .burger-icon {
+	background-image: url(../img/service/close-24px.svg);
+}
+.burger-icon {
+	display: none;
+	width: 48px;
+	height: 48px;
+	padding: 24px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 50%;	
+	background-color: transparent;
+	background-image: url(../img/service/menu-24px.svg);
+	cursor: pointer;
+}
+.burger-icon:focus {
+	outline: none;
+}
+
+.nav-mobil {
+	position: absolute;
+	top: 96px;
+	left: 0px;	
+	/* height: 663px; */
+	z-index: 2;
+	color: #fff;
+	font-weight: 700;
+	background-color: var(--main-color1);
+	/* border-right: 1px solid var(--main-color2); */
+	transform: translateX(-120%);
+	transition: transform .3s ease-in-out;
+}
+
+.nav-mobil__list {
+	display: none;
+	flex-direction: column;
+	padding: 16px 24px;
+}
+.nav-mobil__item {
+	line-height: 1;
+	padding: 16px 0;
+}
+.nav-mobil__link {
+	padding: 16px 0;
+	width: 100%;
+}
+
+/* Кнопка "Заказать звонок" */
+.header__tel {
+	display: inline-block;
+	font-size: 24px;
+	line-height: 0;
+}
+.header__btn {
+	margin-left: 32px;
+}
+.header-tel-icon {
+	display: none;
+}
+.header-tel-icon:focus {
+	outline: none;
+}
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 834px) {
+	.nav-desktop {
+		display: none;
+	}
+	.nav-mobil {
+		display: flex;
+	}
+	.burger-icon {
+		display: block;
+		margin-right: auto;		
+	}
+	.nav-mobil__list {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header {
+		height: auto;
+	}
+	.header-container {
+		justify-content: space-between;
+		padding: 8px 24px;
+	}
+	.burger-icon {
+		margin: 0;		
+	}
+	.nav-mobil{
+		top: 65px;
+	}
+	.header__btn {
+		display: none;
+	}
+	.header__tel {
+		font-size: 20px;
+	}
+	.header-tel-icon {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		vertical-align: middle;
+		margin-left: 16px;
+		border: 1px solid var(--main-color1);
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 50%;	
+		background-color: transparent;
+		background-image: url(../img/service/call-answer-24px.svg);
+		cursor: pointer;
+	}
+}

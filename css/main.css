@@ -1,0 +1,492 @@
+/* СЕКЦИЯ HERO */
+
+.hero__section {
+	/*display: none;*/
+	position: relative;
+	height: 664px;	
+	border-bottom: 1px solid var(--main-color3);
+	background-image: url(../img/service/elipse_5.svg);
+	background-position: calc(100vw/2) bottom;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	overflow: hidden;
+}
+
+/* Летающие буквы */
+.code {
+	display: block;
+	position: absolute;
+	color: var(--main-color2);
+	opacity: .5;
+	font-size: 24px;
+	font-weight: 700;
+}
+.code__div_1 {
+	top: 120px;
+	left: calc(100vw/1.8);
+	transform: rotate(-30deg);
+}
+.code__div_2 {
+	top: 600px;
+	left: calc(100vw/2.6);
+	transform: rotate(15deg);
+}
+.code__braces_1 {
+	top: 50px;
+	left: calc(100vw/2.7);
+	transform: rotate(25deg);
+}
+.code__hash_1 {
+	top: 350px;
+	left: calc(100vw/6);
+	transform: rotate(-25deg);
+}
+.code__slash_1 {
+	bottom: 150px;
+	left: calc(100vw/4);
+	transform: rotate(5deg);
+}
+
+.hero__container {
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+.hero__wrap {
+	position: absolute;
+	top: 144px;
+	left: 24px;
+	height: 354px;
+	display: flex;
+	align-items: flex-start;			
+}
+.hero__heading {
+	display: flex;
+	flex-basis: 50px;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 40px;
+	border-right: 1px solid var(--main-color3);
+}
+.hero__h1 {
+	margin-bottom: 96px;
+	font-size: 100px;
+	line-height: 1;
+	font-weight: 300;
+	text-align: right;
+}
+
+/* Список специализаций */
+.hero__list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding-left: 40px;
+	font-size: 24px;
+	/* font-weight: 700; */
+	line-height: 1;
+	color: var(--main-color1);
+}
+.hero__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+/* Персональная картинка */
+.hero__picture {
+	align-self: flex-end;
+	line-height: 0;
+}
+.hero__img {
+	height: 100%;
+	/* width: auto; */
+}
+
+
+
+/* СЕКЦИЯ DO */
+
+.do__section {
+	/*display: none;*/
+	border-bottom: 1px solid var(--main-color3);
+}
+.do__container { 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*height: 100%;*/
+}
+
+/* Строка карточек специальностей */
+.do__list {
+	display: flex;
+	justify-content: center;
+}
+.do__item {
+	max-width: 264px;
+	margin-bottom: 80px;
+	margin-right: 24px;	
+	padding-top: 96px;
+	color: var(--main-color2);
+	text-align: center;
+	background-size: 72px 72px;
+	background-repeat: no-repeat;
+	background-position: top center;	
+}
+.do__item:last-child {
+	margin-right: 0;
+}
+.do__item_design {
+	background-image: url(../img/service/design-72px.svg);
+}
+.do__item_responsive {
+	background-image: url(../img/service/responsive-72px.svg);
+}
+.do__item_programming {
+	background-image: url(../img/service/programming-72px.svg);
+}
+.do__item_prepress {
+	background-image: url(../img/service/prepress-72px.svg);	
+}
+
+/* Анимация карточек специальностей */
+.do__animate {
+	animation-name: do-trans;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	/* animation-direction: alternate; */
+}
+.do__animate_0 {
+	animation-delay: 0s;
+}
+.do__animate_1 {
+	animation-delay: 2s;
+}
+.do__animate_2 {
+	animation-delay: 4s;
+}
+.do__animate_3 {
+	animation-delay: 6s;
+}
+@keyframes do-trans {
+	0% { opacity: 1;}   
+	10% { opacity: 0; }
+	20% { opacity: 1;}
+}
+
+/* Кнопка Узнать стоимость */
+.do__btn {
+	margin-bottom: 80px;
+}
+
+
+
+/* СЕКЦИЯ SAMPLES */
+
+.samples__section {
+	/* display: none; */
+}
+.samples__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*position: relative;*/
+}
+
+/* Слайдер */
+.swiper-container {
+  width: 100%;
+	margin-bottom: 48px;	
+}
+.swiper-wrapper {
+	margin-bottom: 88px;		
+}
+.swiper-pagination {
+	display: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	width: 64px;
+	height: 64px;
+	opacity: 1;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	box-shadow: 4px 4px 16px  rgba(0, 0, 0, .5);		
+}
+
+/* Слайды примеров работ */
+.swiper-slide {
+	width: 360px;
+	height: 256px;
+	background-color: #000;
+	border: none;
+}
+.samples__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100%;
+	min-height: 100%;	
+	margin-bottom: 24px;	
+}
+.samples__video-content, 
+.samples__picture {
+	border: none;
+	filter: grayscale(100%);
+}
+.samples__video-content:hover, 
+.samples__picture:hover,
+.samples__video-content:active, 
+.samples__picture:active {
+	filter: none;
+}
+.samples__video-content {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 22px;
+}
+.samples__caption {
+	text-align: center;
+	color: var(--main-color2);	
+}
+.samples__btn {
+	margin-bottom: 80px;
+}
+
+
+/* СЕКЦИЯ ADS */
+
+.ads__section {
+	/*display: none;*/
+	position: relative;
+	background: linear-gradient(85.36deg, #E6E6E6 -10.11%, rgba(255, 255, 255, 0) 93.39%), #4282A8;
+}
+
+/* Летающие буквы */
+.code__div_3 {
+	color: #fff;
+	bottom: 30px;
+	right: calc(100vw/5);
+	transform: rotate(15deg);
+}
+.code__braces_2 {
+	color: #fff;
+	bottom: 90px;
+	right: calc(100vw/9);
+	transform: rotate(-50deg);
+}
+.code__braces_3 {
+	top: 50px;
+	left: calc(100vw/25);
+	transform: rotate(25deg);
+}
+.code__hash_2 {
+	bottom: 50px;
+	left: calc(100vw/10);
+	transform: rotate(25deg);
+}
+.code__slash_2 {
+	color: #fff;
+	top: 90px;
+	right: calc(100vw/7);
+	transform: rotate(-5deg);
+}
+
+.ads__container {
+	position: relative;
+	padding: 80px 24px;
+	z-index: 2;
+}
+.ads__h2 {	
+	margin-bottom: 24px;
+	font-size: 44px;
+	line-height: 1.3;
+	font-weight: 700;
+	color: #fff;
+}
+.ads__footnote {
+	/* max-width: 800px; */
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #fff;
+}
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 1024px) {
+
+	/* СЕКЦИЯ HERO */
+	.hero__section {
+		background-position-x: calc(100vw/3);
+	}
+		.hero__wrap {
+		left: 120px;
+		top: 48px;
+		flex-direction: column;
+	}
+	.hero__heading {
+		flex-direction: column;
+		align-items: flex-start;
+		/*padding-right: 10px;*/
+		border-right: none;
+	}
+	.hero__h1 {
+		max-width: 300px;
+		margin-bottom: 64px;
+		text-align: left;	
+	}
+	.hero__list {
+		order: -1;
+		margin-bottom: 48px;
+		padding: 0;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+	.hero__item:not(:last-child) {
+		margin-bottom: 8px;
+	}
+	.hero__picture {
+		margin-right: 0;
+	}
+
+	/* СЕКЦИЯ SAMPLES */
+	.samples__picture {
+		filter: none;
+	}
+	.swiper-container{
+		margin-bottom: 32px;
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+	}
+	.swiper-pagination {
+		display: block;
+	}
+
+	/* СЕКЦИЯ ADS */
+	.ads__container {
+		padding: 40px 24px 36px;
+	}
+	.ads__h2 {	
+		font-size: 30px;		
+	}
+	.ads__footnote {
+		max-width: 600px;
+		font-size: 14px;
+	}
+}
+
+
+@media screen and (max-width: 834px) {
+
+/* СЕКЦИЯ HERO */
+	.code{
+			display: none;
+	}
+	.hero__wrap {
+		left: 24px;
+	}
+
+/* СЕКЦИЯ DO */
+	.do__list {
+		flex-wrap: wrap;
+	}
+	.do__item:nth-child(2n) {
+		margin-right: 0;
+	}	
+}
+
+
+@media screen and (max-width: 600px) {
+
+	/* СЕКЦИЯ HERO */
+	.hero__section {
+		max-height: 800px;
+		height: 100%;
+		background-position: top center;
+		background-size: auto 480px;
+		border: none;	
+	}
+	.hero__container {
+		width: 100%;
+		height: 100%;
+		position: static;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.hero__wrap {
+		align-items: stretch;
+		position: static;
+		height: auto;
+		min-width: 100%;
+	}
+	.hero__picture {
+		align-self: center;
+		height: 455px;
+		order: -1;
+		margin: 24px 0 32px;
+	}
+	.hero__heading {
+		padding: 0;
+		align-items: center;
+	}
+	.hero__h1 {
+		align-self: center;
+		max-width: none;
+		font-size: 44px;
+		margin-bottom: 32px;
+	}
+	.hero__list {
+		justify-content: flex-start;
+		font-size: 24px;
+		color: #50a0d0;
+		margin-bottom: 24px;
+		padding: 0;
+		order: 1;
+	}
+	.hero__item {
+		text-align: center;
+		font-size: 20px;
+	}
+	.hero__item:not(:nth-child(-n+2)) {
+		display: none;
+	}
+	.hero__btn {
+		display: none;
+		/* min-width: 100%; */
+		/* margin-bottom: 48px; */
+	}
+
+	/* СЕКЦИЯ DO */
+	.do__section {
+	border-bottom: none;
+}
+	.do__item {
+		max-width: 100%;
+		margin: 0 0 48px;
+	}
+	.do__btn {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	/* СЕКЦИЯ SAMPLES */
+	.samples__btn {
+		display: none;
+	}
+
+	/* СЕКЦИЯ ADS */
+	.ads__h2 {	
+		font-size: 24px;		
+	}
+	.ads__footnote {
+		font-size: 13px;
+	}	
+
+}

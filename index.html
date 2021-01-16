@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Предварительная загрузка шрифтов -->
+	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font" type="font/woff2">
+	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2">
+	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2">
+
+	<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<link rel="stylesheet" type="text/css" href="./css/header.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/footer.css">
+	<link rel="stylesheet" type="text/css" href="./css/modal.css">
+
+
+	<script defer src="./js/swiper-bundle.min.js"></script>
+	<script defer src="./js/swiper-initialize.js"></script>
+	<script defer src="./js/script.js"></script>
+
+	<title>Иван Лапаев. Персональный сайт</title>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container header-container">
+
+
+			<!-- Верхнее горизонтальное меню навигации -->
+			<nav class="nav-desktop">
+				<ul class="nav-desktop__list">
+					<li class="nav-desktop__item"><a class="nav-desktop__link" href="">Услуги</a></li>
+					<li class="nav-desktop__item"><a class="nav-desktop__link" href="">Резюме</a></li>
+					<li class="nav-desktop__item"><a class="nav-desktop__link" href="">Портфолио</a></li>
+				</ul>
+			</nav>
+
+			<!-- Мобильное меню навигации -->
+
+			<!-- Иконка бургер-меню -->
+			<input type="checkbox" id="burger-checkbox">
+			<label for="burger-checkbox" class="burger-icon"></label>
+
+			<nav class="nav-mobil">
+				<ul class="nav-mobil__list">
+					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Услуги</a>
+					</li>
+					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Резюме</a></li>
+					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Портфолио</a></li>
+				</ul>
+			</nav>
+
+			<!-- Телефон в верхней строке -->
+			<span class="header__tel">
+				+7 906 031 44 89
+
+				<!-- Кнопка "Заказать звонок" -->
+				<button class="btn btn_no-fill btn__call-request header__btn" type="button">Заказать звонок</button>
+
+				<button class="header-tel-icon btn__call-request" type="button"></button>
+			</span>
+		</div>
+	</header>
+
+	<main class="main">
+
+		<!-- СЕКЦИЯ HERO -->
+
+		<section class="hero__section">
+
+			<!-- Летающие буквы -->
+			<p class="code code__div_1">&lt;div&gt;</p>
+			<p class="code code__div_2">&lt;div&gt;</p>
+			<p class="code code__braces_1">{}</p>
+			<p class="code code__hash_1">#</p>
+			<p class="code code__slash_1">&lt;/&gt;</p>
+
+			<div class="container hero__container">
+
+
+				<div class="hero__wrap">
+					<div class="hero__heading">
+						<h1 class="hero__h1">
+							Иван Лапаев
+						</h1>
+
+						<button type="button" class="btn btn_fill hero__btn">
+							Узнать больше
+						</button>
+					</div>
+
+					<!-- Список специализаций -->
+					<ul class="hero__list">
+						<li class="hero__item">Веб-дизайн и верстка</li>
+						<li class="hero__item">Frontend-разработка</li>
+						<li class="hero__item">Дизайн в полиграфии</li>
+						<li class="hero__item">Цветокоррекция</li>
+						<li class="hero__item">Препресс</li>
+						<li class="hero__item">Видео- и аудиомонтаж</li>
+					</ul>
+				</div>
+
+
+				<!-- Персональная картинка -->
+				<picture class="hero__picture">
+					<source type="image/webp" srcset="./img/personal/hero_335x640@1x.webp 1x,
+									./img/personal/hero_335x640@2x.webp 2x">
+
+					<img class="hero__img" src="./img/personal/hero_335x640@1x.png" srcset="./img/personal/lim_380x648@2x.png 2x"
+						alt="Иван Лапаев">
+				</picture>
+			</div>
+		</section>
+
+
+
+		<!-- СЕКЦИЯ DO -->
+
+		<section class="do__section">
+			<div class="container do__container">
+				<h2 class="h2">
+					Что я делаю
+				</h2>
+
+				<!-- Строка карточек специальностей -->
+				<ul class="do__list">
+					<li class="do__item do__item_design do__animate do__animate_0">
+						Дизайн персональных и&nbsp;корпоративных сайтов
+					</li>
+
+					<li class="do__item do__item_responsive do__animate do__animate_1">
+						Адаптивная верстка лендинг-&nbsp;страниц и&nbsp;сайтов
+					</li>
+
+					<li class="do__item  do__item_programming do__animate do__animate_2">
+						Frontend–разработка и&nbsp;программирование
+					</li>
+
+					<li class="do__item do__item_prepress do__animate do__animate_3">
+						Дизайн, верстка и&nbsp;препресс в&nbsp;полиграфии
+					</li>
+				</ul>
+
+				<!-- Кнопка "Узнать стоимость" -->
+				<button type="button" class="btn btn_fill btn__call-request do__btn">
+					Узнать стоимость
+				</button>
+			</div>
+		</section>
+
+
+
+		<!-- СЕКЦИЯ SAMPLES -->
+
+		<section class="samples__section">
+			<div class="container samples__container">
+				<h2 class="h2">
+					Примеры моих&nbsp;работ
+				</h2>
+
+				<!-- Слайдер -->
+				<!-- Slider main container -->
+				<div class="swiper-container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+
+						<!-- Слайды примеров работ -->
+						<div class="swiper-slide">
+							<a class="samples__link" href="https://www.shkola-rodov.ru" target="_blank">
+								<picture class="samples__picture">
+									<source type="image/webp" srcset="./img/personal/shkola-rodov1_360x256@1x.webp 1x,
+														./img/personal/shkola-rodov1_360x256@2x.webp 2x">
+									<img class="samples__img" src="./img/personal/shkola-rodov1_360x256@1x.jpg"
+										srcset="./img/personal/shkola-rodov1_360x256@2x.jpg 2x" alt="Дизайн сайта “Школа родов онлайн”">
+								</picture>
+							</a>
+
+							<p class="samples__caption">Дизайн сайта “ШКОЛА РОДОВ онлайн”</p>
+						</div>
+
+						<div class="swiper-slide">
+							<a class="samples__link" href="">
+								<picture class="samples__picture">
+									<source type="image/webp" srcset="./img/personal/news-agency_360x256@1x.webp 1x,
+																				./img/personal/news-agency_360x256@2x.webp 2x">
+									<img class="samples__img" src="./img/personal/news-agency_360x256@1x.jpg"
+										srcset="./img/personal/news-agency_360x256@2x.jpg 2x" alt="Сайт новостного агентства">
+								</picture>
+							</a>
+
+							<p class="samples__caption">Сайт новостного агентства</p>
+						</div>
+
+						<div class="swiper-slide">
+							<iframe class="samples__video-content" src="https://player.vimeo.com/video/487632373"
+								allow="autoplay; fullscreen" allowfullscreen>
+							</iframe>
+
+							<p class="samples__caption">Рекламный видеоролик туроператора "PEGAS&nbsp;TOURISTIC"</p>
+						</div>
+
+						<div class="swiper-slide">
+							<a class="samples__link" href="">
+								<picture class="samples__picture">
+									<source type="image/webp" srcset="./img/personal/miridom1_360x256@1x.webp 1x,
+																										./img/personal/miridom1_360x256@2x.webp 2x">
+									<img class="samples__img" src="./img/personal/miridom1_360x256@1x.jpg"
+										srcset="./img/personal/miridom1_360x256@2x.jpg 2x" alt="Журналы ИД “Элита паблишер”">
+								</picture>
+							</a>
+
+							<p class="samples__caption">Журналы ИД “Элита паблишер”</p>
+						</div>
+
+						<div class="swiper-slide">
+							<iframe class="samples__video-content" src="https://player.vimeo.com/video/490454308"
+								allow="autoplay; fullscreen" allowfullscreen>
+							</iframe>
+
+							<p class="samples__caption">Вариант заставки для YouTube канала АНО&nbsp;"Выбор&nbsp;родителей"</p>
+						</div>
+					</div>
+
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+
+				<!-- Кнопка "Заказать проект" -->
+				<button type="button" class="btn btn_fill btn__call-request samples__btn">
+					Заказать проект
+				</button>
+			</div>
+		</section>
+
+
+
+		<!-- СЕКЦИЯ ADS -->
+
+		<section class="ads__section">
+
+			<!-- Летающие Буквы -->
+			<div class="code code__div_3">&lt;div&gt;</div>
+			<div class="code code__braces_2">{}</div>
+			<div class="code code__braces_3">{}</div>
+			<div class="code code__hash_2">#</div>
+			<div class="code code__slash_2">&lt;/&gt;</div>
+
+			<div class="container ads__container">
+				<h2 class="ads__h2">
+					Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000&nbsp;рублей всего за&nbsp;24&nbsp;часа.*
+				</h2>
+
+				<p class="ads__footnote">
+					* Срок и стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально,
+					в&nbsp;зависимости от&nbsp;сложности задач.
+				</p>
+			</div>
+		</section>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="container footer_container">
+
+			<!-- Левая Часть. Меню навигации -->
+			<nav class="footer-nav">
+				<ul class="footer-nav__list">
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="">Услуги</a>
+					</li>
+
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="">Портфолио</a>
+					</li>
+
+					<li class="footer-nav__item">
+						<a class="footer-nav__link" href="">Стоимость</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Средняя часть. Телефон и почта -->
+			<ul class="contacts__list">
+				<li class="contacts__item">
+					<a class="contacts__item_phone" href="tel:+79060314489">+7 906 031 44 89</a>
+				</li>
+
+				<li class="contacts__item">
+					<a class="contacts__item_email" href="mailto:laim0302@mail.ru">laim0302@mail.ru</a>
+				</li>
+			</ul>
+
+			<!-- Правая чать. Кнопка и соцсети -->
+			<div class="socials">
+
+				<!-- Кнопка Заказать звонок -->
+				<button class="btn btn_no-fill footer__btn btn__call-request" type="button">
+					Заказать звонок
+				</button>
+
+				<!-- Соцсети -->
+				<ul class="socials__list">
+					<li class="socials__item">
+						<a class="socials__link facebook" target="_blank"
+							href="https://www.facebook.com/profile.php?id=100004665367468"></a>
+					</li>
+
+					<li class="socials__item">
+						<a class="socials__link instagram" target="_blank" href="https://www.instagram.com/ivlap/"></a>
+					</li>
+
+					<li class="socials__item">
+						<a class="socials__link twitter" href=""></a>
+					</li>
+
+					<li class="socials__item">
+						<a class="socials__link vk" href=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer__dark-line">
+			© Иван Лапаев, 2020 – 2021
+		</div>
+	</footer>
+
+
+
+	<!-- МОДАЛЬНЫЕ ОКНА -->
+
+	<!-- Заказать обратный звонок -->
+	<div class="modal-container">
+		<div class="modal-window">
+			<button class="modal-window__btn-close" type="reset"></button>
+
+			<h2 class="modal-window__h2">Заказать обратный звонок</h2>
+
+			<p class="modal-window__appeal">
+				Оставьте свои контакты и я перезвоню вам
+			</p>
+
+			<form class="form callback" name="callback" method="get" action="https://echo.htmlacademy.ru" target="_blank">
+				<!-- <form class="form callback" name="callback" method="post" action="mailto:laim0302@mail.ru" enctype="text/plain"> -->
+				<h3 class="form__h3">Персональные данные</h3>
+
+				<label class="form__label">Имя*
+					<input class="form__input" name="name" type="text" autofocus required>
+				</label>
+
+				<label class="form__label">Телефон*
+					<input class="form__input" name="phone" type="tel" required>
+				</label>
+
+				<h3 class="form__h3 form__comment">Комментарий</h3>
+
+				<textarea class="form__textarea form__comment" name="comment" rows="4"></textarea>
+
+				<button class="btn btn_fill form__btn" type="submit">Отправить</button>
+			</form>
+
+		</div>
+
+		<!-- Сообщение отправлено -->
+		<div class="message-sent">
+			<h3 class="message-sent__h3">Ваше сообщение отправлено.</h3>
+
+			<p class="message-sent__text">Я свяжусь с вами в ближайшее время. Спасибо.</p>
+
+			<button class="btn btn_fill message-sent__btn" type="reset">OK</button>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
