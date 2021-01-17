@@ -62,7 +62,7 @@
 	align-items: flex-end;
 	align-self: center;
 	flex-direction: column;	
-	height: 354px;		
+	height: 346px;		
 }
 .hero__h1 {
 	max-width: 360px;
@@ -84,7 +84,6 @@
 	line-height: 1;
 	color: var(--main-color1);
 }
-
 /* Персональная картинка */
 .hero__picture {
 	align-self: flex-end;
