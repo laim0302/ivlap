@@ -83,18 +83,28 @@
 			<p class="code code__slash_1">&lt;/&gt;</p>
 
 			<div class="container hero__container">
+				<!-- Персональная картинка -->
+				<picture class="hero__picture">
+					<source type="image/webp" srcset="./img/personal/hero_335x640@1x.webp 1x,
+													./img/personal/hero_335x640@2x.webp 2x">
+
+					<img class="hero__img" src="./img/personal/hero_335x640@1x.png" srcset="./img/personal/lim_380x648@2x.png 2x"
+						alt="Иван Лапаев">
+				</picture>
+
 
 
 				<div class="hero__wrap">
-					<div class="hero__heading">
-						<h1 class="hero__h1">
-							Иван Лапаев
-						</h1>
 
-						<button type="button" class="btn btn_fill hero__btn">
-							Узнать больше
-						</button>
-					</div>
+					<!-- Заголовок -->
+					<h1 class="hero__h1">
+						Иван Лапаев
+					</h1>
+
+					<!-- Кнопка "Узнать больше" -->
+					<button type="button" class="btn btn_fill hero__btn">
+						Узнать больше
+					</button>
 
 					<!-- Список специализаций -->
 					<ul class="hero__list">
@@ -108,14 +118,7 @@
 				</div>
 
 
-				<!-- Персональная картинка -->
-				<picture class="hero__picture">
-					<source type="image/webp" srcset="./img/personal/hero_335x640@1x.webp 1x,
-									./img/personal/hero_335x640@2x.webp 2x">
 
-					<img class="hero__img" src="./img/personal/hero_335x640@1x.png" srcset="./img/personal/lim_380x648@2x.png 2x"
-						alt="Иван Лапаев">
-				</picture>
 			</div>
 		</section>
 
