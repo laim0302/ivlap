@@ -19,12 +19,14 @@ window.addEventListener('DOMContentLoaded', function () {
 		btnClose = document.querySelector('.modal-window__btn-close'),  // Кнопка закрытия окна без отправки данных
 		btnSend = document.querySelector('.form__btn'),  // Кнопка отправки данных формы
 		messageSent = document.querySelector('.message-sent'),  // Сообщение об отправке данных
-		btnMessageSent = document.querySelector('.message-sent__btn');  // Кнопка ОК
+		btnMessageSent = document.querySelector('.message-sent__btn'),  // Кнопка ОК
+		formName = document.getElementById('form__name'), // Поле ввода "Имя"
+		formPhone = document.getElementById('form__phone');  // Поле ввода "Телефон"
 
 	// Вызов окна
 	btnCallRequest.forEach(function (button) {
 		button.addEventListener('click', function (event) {
-			event.preventDefault();
+			// event.preventDefault();
 			// console.log(this.innerHTML);
 			modalContainer.classList.toggle('modal-container_active');
 		})
@@ -36,9 +38,13 @@ window.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// Отправка данных "Заказать звонок"
-	btnSend.addEventListener('click', function () {
-		modalWindow.classList.toggle('modal-window_close');
-		messageSent.classList.toggle('message-sent_active'); //  Открытие окна "Сообщение отправлено"
+	btnSend.addEventListener('click', function (event) {
+		if (formName.value.length !== 0 && formPhone.value.length !== 0) {
+			modalWindow.classList.toggle('modal-window_close');
+			messageSent.classList.toggle('message-sent_active'); //  Открытие окна "Сообщение отправлено"
+			// console.log(formName.value.length);
+			// console.log(formPhone.value.length);
+		};
 	});
 
 	// Закрытие модального окна "Заказать звонок" после отправки данных
@@ -48,6 +54,4 @@ window.addEventListener('DOMContentLoaded', function () {
 		modalContainer.classList.toggle('modal-container_active');
 	});
 	//------------------------------------------------------
-
-
 });

@@ -50,8 +50,7 @@
 
 			<nav class="nav-mobil">
 				<ul class="nav-mobil__list">
-					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Услуги</a>
-					</li>
+					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Услуги</a></li>
 					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Резюме</a></li>
 					<li class="nav-mobil__item"><a class="nav-mobil__link" href="">Портфолио</a></li>
 				</ul>
@@ -64,6 +63,7 @@
 				<!-- Кнопка "Заказать звонок" -->
 				<button class="btn btn_no-fill btn__call-request header__btn" type="button">Заказать звонок</button>
 
+				<!-- Мобильная иконка телефона -->
 				<button class="header-tel-icon btn__call-request" type="button"></button>
 			</span>
 		</div>
@@ -88,7 +88,7 @@
 					<source type="image/webp" srcset="./img/personal/hero_335x640@1x.webp 1x,
 													./img/personal/hero_335x640@2x.webp 2x">
 
-					<img class="hero__img" src="./img/personal/hero_335x640@1x.png" srcset="./img/personal/lim_380x648@2x.png 2x"
+					<img class="hero__img" src="./img/personal/hero_335x640@1x.png" srcset="./img/personal/hero_335x640@2x.png 2x"
 						alt="Иван Лапаев">
 				</picture>
 
@@ -354,19 +354,18 @@
 				Оставьте свои контакты и я перезвоню вам
 			</p>
 
-			<form class="form callback" name="callback" method="get" action="https://echo.htmlacademy.ru" target="_blank">
-				<!-- <form class="form callback" name="callback" method="post" action="mailto:laim0302@mail.ru" enctype="text/plain"> -->
-				<h3 class="form__h3">Персональные данные</h3>
+			<!-- <form class="form callback" name="callback" method="get" action="https://echo.htmlacademy.ru" target="_blank"> -->
+			<form class="form callback" name="callback" action="mailto:info@ivlap.ru" method="post" enctype="text/plain">
 
 				<label class="form__label">Имя*
-					<input class="form__input" name="name" type="text" autofocus required>
+					<input class="form__input" name="form__name" id="form__name" type="text" autofocus required>
 				</label>
 
 				<label class="form__label">Телефон*
-					<input class="form__input" name="phone" type="tel" required>
+					<input class="form__input" name="form__phone" id="form__phone" type="tel" required>
 				</label>
 
-				<h3 class="form__h3 form__comment">Комментарий</h3>
+				<p class="form__comment">Комментарий</p>
 
 				<textarea class="form__textarea form__comment" name="comment" rows="4"></textarea>
 
