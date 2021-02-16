@@ -65,7 +65,7 @@
 .form__textarea {
 	display: block;
 	max-width: 352px;
-	width: 100%;
+	width: 100%;	
 }
 .form__label,
 .form__textarea {
@@ -74,7 +74,6 @@
 .form__textarea {
 	resize: none;
 }
-
 .form__input:focus,
 .form__textarea:focus {
 outline: 1px solid var(--main-color1);

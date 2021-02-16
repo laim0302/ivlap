@@ -20,8 +20,8 @@ window.addEventListener('DOMContentLoaded', function () {
 		btnSend = document.querySelector('.form__btn'),  // Кнопка отправки данных формы
 		messageSent = document.querySelector('.message-sent'),  // Сообщение об отправке данных
 		btnMessageSent = document.querySelector('.message-sent__btn'),  // Кнопка ОК
-		formName = document.getElementById('form__name'), // Поле ввода "Имя"
-		formPhone = document.getElementById('form__phone');  // Поле ввода "Телефон"
+		formName = document.getElementById('name'), // Поле ввода "Имя"
+		formPhone = document.getElementById('phone');  // Поле ввода "Телефон"
 
 	// Вызов окна
 	btnCallRequest.forEach(function (button) {
@@ -54,4 +54,31 @@ window.addEventListener('DOMContentLoaded', function () {
 		modalContainer.classList.toggle('modal-container_active');
 	});
 	//------------------------------------------------------
+
+	// Маскирование полей ввода
+	var selector = document.querySelector("input[type='tel']");
+	var im = new Inputmask("+7 (999) 999-99-99");
+	im.mask(selector);
+
+	// Валидация полей ввода
+	new JustValidate('.form', {
+		rules: {
+			name: {
+				required: true,
+				minLength: 2
+			},
+			phone: {
+				required: true,
+				function: (name, value) => {
+					const phoneNumber = selector.inputmask.unmaskedvalue()
+					return Number(phoneNumber) && phoneNumber.length === 10
+				}
+			},
+		},
+		messages: {
+			name: 'Заполните поле',
+			phone: 'Заполните поле'
+		},
+	});
+	// ------------------------------------
 });

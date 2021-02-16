@@ -66,7 +66,6 @@ transform: none;
 .burger-icon:focus {
 	outline: none;
 }
-
 .nav-mobil {
 	position: absolute;
 	top: 96px;
@@ -97,7 +96,8 @@ transform: none;
 
 /* Кнопка "Заказать звонок" */
 .header__tel {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	font-size: 24px;
 	line-height: 1;
 }
@@ -155,15 +155,14 @@ transform: none;
 		display: inline-block;
 		width: 32px;
 		height: 32px;
-		/* vertical-align: middle; */
+		/*vertical-align: middle;	*/
 		margin-left: 16px;
-		border: 1px solid var(--main-color1);
-		border-radius: 50%;
+		border: none;		
 		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 50%;	
+		background-position: bottom center;
+		/* background-size: 80%; */
 		background-color: transparent;
-		background-image: url(../img/service/call-answer-24px.svg);
-		cursor: pointer;
+		background-image: url(../img/service/call-answer-24px-round.svg);
+		cursor: pointer;		
 	}
 }

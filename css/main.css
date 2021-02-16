@@ -165,12 +165,10 @@
 	10% { opacity: 0; }
 	20% { opacity: 1;}
 }
-
 /* Кнопка Узнать стоимость */
 .do__btn {
 	margin-bottom: 80px;
 }
-
 
 
 /* СЕКЦИЯ SAMPLES */
@@ -208,9 +206,10 @@
 
 /* Слайды примеров работ */
 .swiper-slide {
-	width: 360px;
+	max-width: 360px;
+	width: 100%;;
 	height: 256px;
-	background-color: #000;
+	background-color: #fff;
 	border: none;
 }
 .samples__link {
@@ -219,19 +218,16 @@
 	align-items: center;
 	min-width: 100%;
 	min-height: 100%;	
-	margin-bottom: 24px;	
+	margin-bottom: 24px;		
 }
 .samples__video-content, 
 .samples__picture {
-	border: none;
-	filter: grayscale(100%);
+	border: none;		
 }
-.samples__video-content:hover, 
-.samples__picture:hover,
-.samples__video-content:active, 
-.samples__picture:active {
-	filter: none;
+.samples__img {
+	/* object-fit: fill; */
 }
+
 .samples__video-content {
 	width: 100%;
 	height: 100%;

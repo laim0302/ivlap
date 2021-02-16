@@ -19,9 +19,10 @@
 	<link rel="stylesheet" type="text/css" href="./css/footer.css">
 	<link rel="stylesheet" type="text/css" href="./css/modal.css">
 
-
 	<script defer src="./js/swiper-bundle.min.js"></script>
 	<script defer src="./js/swiper-initialize.js"></script>
+	<script defer src="./js/inputmask.min.js"></script>
+	<script defer src="./js/just-validate.min.js"></script>
 	<script defer src="./js/script.js"></script>
 
 	<title>Иван Лапаев. Персональный сайт</title>
@@ -31,7 +32,6 @@
 
 	<header class="header">
 		<div class="container header-container">
-
 
 			<!-- Верхнее горизонтальное меню навигации -->
 			<nav class="nav-desktop">
@@ -92,8 +92,6 @@
 						alt="Иван Лапаев">
 				</picture>
 
-
-
 				<div class="hero__wrap">
 
 					<!-- Заголовок -->
@@ -116,12 +114,8 @@
 						<li class="hero__item">Препресс</li>
 					</ul>
 				</div>
-
-
-
 			</div>
 		</section>
-
 
 
 		<!-- СЕКЦИЯ DO -->
@@ -159,7 +153,6 @@
 		</section>
 
 
-
 		<!-- СЕКЦИЯ SAMPLES -->
 
 		<section class="samples__section">
@@ -172,10 +165,10 @@
 				<!-- Slider main container -->
 				<div class="swiper-container">
 					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
+					<ul class="swiper-wrapper">
 
 						<!-- Слайды примеров работ -->
-						<div class="swiper-slide">
+						<li class="swiper-slide">
 							<a class="samples__link" href="https://www.shkola-rodov.ru" target="_blank">
 								<picture class="samples__picture">
 									<source type="image/webp" srcset="./img/personal/shkola-rodov1_360x256@1x.webp 1x,
@@ -186,10 +179,10 @@
 							</a>
 
 							<p class="samples__caption">Дизайн сайта “ШКОЛА РОДОВ онлайн”</p>
-						</div>
+						</li>
 
-						<div class="swiper-slide">
-							<a class="samples__link" href="">
+						<li class="swiper-slide">
+							<a class="samples__link" href="./news-agency/news-agency.html" target="_blank">
 								<picture class="samples__picture">
 									<source type="image/webp" srcset="./img/personal/news-agency_360x256@1x.webp 1x,
 																				./img/personal/news-agency_360x256@2x.webp 2x">
@@ -199,17 +192,30 @@
 							</a>
 
 							<p class="samples__caption">Сайт новостного агентства</p>
-						</div>
+						</li>
 
-						<div class="swiper-slide">
+						<li class="swiper-slide">
+							<a class="samples__link" href="./lagoona/lagoona.html" target="_blank">
+								<picture class="samples__picture">
+									<source type="image/webp" srcset="./img/personal/lagoona_360x256.webp 1x,
+																				./img/personal/lagoona_720x512.webp 2x">
+									<img class="samples__img" src="./img/personal/lagoona_360x256.jpg"
+										srcset="./img/personal/lagoona_720x512.jpg 2x" alt="Сайт новостного агентства">
+								</picture>
+							</a>
+
+							<p class="samples__caption">Сайт сети отелей Lagoona</p>
+						</li>
+
+						<li class="swiper-slide">
 							<iframe class="samples__video-content" src="https://player.vimeo.com/video/487632373"
 								allow="autoplay; fullscreen" allowfullscreen>
 							</iframe>
 
 							<p class="samples__caption">Рекламный видеоролик туроператора "PEGAS&nbsp;TOURISTIC"</p>
-						</div>
+						</li>
 
-						<div class="swiper-slide">
+						<li class="swiper-slide">
 							<a class="samples__link" href="">
 								<picture class="samples__picture">
 									<source type="image/webp" srcset="./img/personal/miridom1_360x256@1x.webp 1x,
@@ -220,16 +226,16 @@
 							</a>
 
 							<p class="samples__caption">Журналы ИД “Элита паблишер”</p>
-						</div>
+						</li>
 
-						<div class="swiper-slide">
+						<li class="swiper-slide">
 							<iframe class="samples__video-content" src="https://player.vimeo.com/video/490454308"
 								allow="autoplay; fullscreen" allowfullscreen>
 							</iframe>
 
 							<p class="samples__caption">Вариант заставки для YouTube канала АНО&nbsp;"Выбор&nbsp;родителей"</p>
-						</div>
-					</div>
+						</li>
+					</ul>
 
 					<!-- If we need pagination -->
 					<div class="swiper-pagination"></div>
@@ -245,7 +251,6 @@
 				</button>
 			</div>
 		</section>
-
 
 
 		<!-- СЕКЦИЯ ADS -->
@@ -340,7 +345,6 @@
 	</footer>
 
 
-
 	<!-- МОДАЛЬНЫЕ ОКНА -->
 
 	<!-- Заказать обратный звонок -->
@@ -358,16 +362,16 @@
 			<form class="form callback" name="callback" action="mailto:info@ivlap.ru" method="post" enctype="text/plain">
 
 				<label class="form__label">Имя*
-					<input class="form__input" name="form__name" id="form__name" type="text" autofocus required>
+					<input class="form__input" type="text" name="name" id="name" data-validate-field="name" autofocus>
 				</label>
 
 				<label class="form__label">Телефон*
-					<input class="form__input" name="form__phone" id="form__phone" type="tel" required>
+					<input class="form__input" type="tel" name="phone" id="phone" data-validate-field="phone">
 				</label>
 
-				<p class="form__comment">Комментарий</p>
-
-				<textarea class="form__textarea form__comment" name="comment" rows="4"></textarea>
+				<label class="form__comment">Комментарий
+					<textarea class="form__textarea form__comment" name="comment" rows="4"></textarea>
+				</label>
 
 				<button class="btn btn_fill form__btn" type="submit">Отправить</button>
 			</form>
@@ -383,7 +387,6 @@
 			<button class="btn btn_fill message-sent__btn" type="reset">OK</button>
 		</div>
 	</div>
-
 
 </body>
 
