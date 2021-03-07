@@ -220,18 +220,20 @@
 	min-height: 100%;	
 	margin-bottom: 24px;		
 }
-.samples__video-content, 
+.samples__video, 
 .samples__picture {
 	border: none;		
 }
 .samples__img {
 	/* object-fit: fill; */
 }
-
-.samples__video-content {
+.samples__video {
 	width: 100%;
 	height: 100%;
 	margin-bottom: 22px;
+}
+.samples__video:hover {
+	cursor: pointer;
 }
 .samples__caption {
 	text-align: center;

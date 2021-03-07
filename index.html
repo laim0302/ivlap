@@ -7,9 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Предварительная загрузка шрифтов -->
-	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font" type="font/woff2">
-	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2">
-	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2">
+	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font" type="font/woff2"
+		crossorigin="anonymous">
+	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2"
+		crossorigin="anonymous">
+	<link rel="preload" href="./fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2"
+		crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
@@ -168,18 +171,6 @@
 					<ul class="swiper-wrapper">
 
 						<!-- Слайды примеров работ -->
-						<li class="swiper-slide">
-							<a class="samples__link" href="https://www.shkola-rodov.ru" target="_blank">
-								<picture class="samples__picture">
-									<source type="image/webp" srcset="./img/personal/shkola-rodov1_360x256@1x.webp 1x,
-														./img/personal/shkola-rodov1_360x256@2x.webp 2x">
-									<img class="samples__img" src="./img/personal/shkola-rodov1_360x256@1x.jpg"
-										srcset="./img/personal/shkola-rodov1_360x256@2x.jpg 2x" alt="Дизайн сайта “Школа родов онлайн”">
-								</picture>
-							</a>
-
-							<p class="samples__caption">Дизайн сайта “ШКОЛА РОДОВ онлайн”</p>
-						</li>
 
 						<li class="swiper-slide">
 							<a class="samples__link" href="./news-agency/news-agency.html" target="_blank">
@@ -208,29 +199,44 @@
 						</li>
 
 						<li class="swiper-slide">
-							<iframe class="samples__video-content" src="https://player.vimeo.com/video/487632373"
-								allow="autoplay; fullscreen" allowfullscreen>
+							<a class="samples__link" href="./evklid/evklid.html" target="_blank">
+								<picture class="samples__picture">
+									<source type="image/webp" srcset="./img/personal/evklid_360x256@1x.webp 1x,
+																				./img/personal/evklid_360x256@2x.webp 2x">
+									<img class="samples__img" src="./img/personal/evklid_360x256@1x.jpg"
+										srcset="./img/personal/evklid_360x256@2x.jpg 2x" alt="Сайт новостного агентства">
+								</picture>
+							</a>
+
+							<p class="samples__caption">Сайт компании Евклид</p>
+						</li>
+
+						<li class="swiper-slide">
+							<a class="samples__link" href="https://www.shkola-rodov.ru" target="_blank">
+								<picture class="samples__picture">
+									<source type="image/webp" srcset="./img/personal/shkola-rodov1_360x256@1x.webp 1x,
+														./img/personal/shkola-rodov1_360x256@2x.webp 2x">
+									<img class="samples__img" src="./img/personal/shkola-rodov1_360x256@1x.jpg"
+										srcset="./img/personal/shkola-rodov1_360x256@2x.jpg 2x" alt="Дизайн сайта “Школа родов онлайн”">
+								</picture>
+							</a>
+
+							<p class="samples__caption">Дизайн сайта “ШКОЛА РОДОВ онлайн”</p>
+						</li>
+
+						<li class="swiper-slide">
+							<iframe class="samples__video" src="https://www.youtube.com/embed/NM1IkxFCpa8"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
 							</iframe>
 
 							<p class="samples__caption">Рекламный видеоролик туроператора "PEGAS&nbsp;TOURISTIC"</p>
 						</li>
 
 						<li class="swiper-slide">
-							<a class="samples__link" href="">
-								<picture class="samples__picture">
-									<source type="image/webp" srcset="./img/personal/miridom1_360x256@1x.webp 1x,
-																										./img/personal/miridom1_360x256@2x.webp 2x">
-									<img class="samples__img" src="./img/personal/miridom1_360x256@1x.jpg"
-										srcset="./img/personal/miridom1_360x256@2x.jpg 2x" alt="Журналы ИД “Элита паблишер”">
-								</picture>
-							</a>
-
-							<p class="samples__caption">Журналы ИД “Элита паблишер”</p>
-						</li>
-
-						<li class="swiper-slide">
-							<iframe class="samples__video-content" src="https://player.vimeo.com/video/490454308"
-								allow="autoplay; fullscreen" allowfullscreen>
+							<iframe class="samples__video" src="https://player.vimeo.com/video/490454308"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen>
 							</iframe>
 
 							<p class="samples__caption">Вариант заставки для YouTube канала АНО&nbsp;"Выбор&nbsp;родителей"</p>
@@ -358,8 +364,8 @@
 				Оставьте свои контакты и я перезвоню вам
 			</p>
 
-			<!-- <form class="form callback" name="callback" method="get" action="https://echo.htmlacademy.ru" target="_blank"> -->
-			<form class="form callback" name="callback" action="mailto:info@ivlap.ru" method="post" enctype="text/plain">
+			<form class="form callback" name="callback" method="get" action="https://echo.htmlacademy.ru" target="_blank">
+				<!-- <form class="form callback" name="callback" action="mailto:info@ivlap.ru" method="post" enctype="text/plain"> -->
 
 				<label class="form__label">Имя*
 					<input class="form__input" type="text" name="name" id="name" data-validate-field="name" autofocus>
